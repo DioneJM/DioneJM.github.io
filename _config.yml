@@ -23,7 +23,7 @@ github_username:  DioneJM
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
+theme: minima
 plugins:
   - jekyll-feed
 
