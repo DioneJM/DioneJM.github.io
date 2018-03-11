@@ -1,5 +1,4 @@
 ---
-layout: default
 title:  "It's the 12th!"
 categories: jekyll update
 ---

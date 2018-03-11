@@ -1,5 +1,4 @@
 ---
-layout: default
 title:  "Test post pls ignore"
 categories: jekyll update
 ---
