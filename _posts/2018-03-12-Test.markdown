@@ -1,6 +1,6 @@
 ---
 title:  "It's the 12th!"
-layout: blog
+layout: page
 categories: jekyll update
 ---
 
