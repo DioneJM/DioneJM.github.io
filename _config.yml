@@ -27,6 +27,13 @@ theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      permalink: "none"
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
