@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo testing...",
+    "build": "gatsby develop",
     "deploy": "gatsby build && gh-pages -d public"
   },
   "repository": {
@@ -18,9 +19,16 @@
   },
   "homepage": "https://github.com/DioneJM/DioneJM.github.io#readme",
   "dependencies": {
+    "@reach/skip-nav": "^0.13.2",
     "gatsby": "^3.0.4",
+    "gatsby-image": "^3.0.0",
+    "gatsby-plugin-mdx": "^2.0.1",
+    "gatsby-theme-blog": "^2.0.5",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "theme-ui": "^0.3.5"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0"
