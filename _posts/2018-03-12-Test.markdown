@@ -1,7 +1,0 @@
----
-title:  "It's the 12th!"
-layout: page
-categories: jekyll update
----
-
-Just testing to see if this will show up
