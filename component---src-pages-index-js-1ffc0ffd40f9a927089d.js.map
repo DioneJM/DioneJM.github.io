@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://dionejm.github.io/./src/pages/index.js"],"names":["Home"],"mappings":"oLAEe,SAASA,IACpB,OAAO","file":"component---src-pages-index-js-1ffc0ffd40f9a927089d.js","sourcesContent":["import React from \"react\"\n\nexport default function Home() {\n    return <h1>Hello from Gatsby!</h1>\n}"],"sourceRoot":""}

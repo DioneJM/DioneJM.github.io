@@ -1,0 +1,2 @@
+(self.webpackChunkdionejm_github_io=self.webpackChunkdionejm_github_io||[]).push([[678],{704:function(e,n,t){"use strict";t.r(n),t.d(n,{default:function(){return i}});var u=t(294);function i(){return u.createElement("h1",null,"Hello from Gatsby!")}}}]);
+//# sourceMappingURL=component---src-pages-index-js-1ffc0ffd40f9a927089d.js.map
