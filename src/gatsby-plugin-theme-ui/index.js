@@ -7,11 +7,11 @@ const sienna = `#CE8964`;
 const brownWhite = `#FAF3EF`;
 
 export default {
-    colors: {
-        text: sienna,
-        primary: brownSugar,
-        heading: blue,
-    },
+    // colors: {
+    //     text: sienna,
+    //     primary: brownSugar,
+    //     heading: blue,
+    // },
 }
 
 
@@ -22,14 +22,29 @@ export default {
  * accent: contrasts `primary` e.g. link in an article
  * background: background colour
  */
-const darkTheme = {
+
+export const theme = {
+    dark: {
+        backgroundColor: black,
+        titleTextColour: blue,
+        normalTextColour: lightBlue,
+        linkColour: cream
+    },
+    light: {
+        backgroundColor: brownWhite,
+        titleTextColour: brownSugar,
+        normalTextColour: sienna,
+        linkColour: blue
+    }
+}
+export const darkTheme = {
     primary: blue,
     secondary: lightBlue,
     accent: cream,
     background: black,
 }
 
-const lightTheme = {
+export const lightTheme = {
     primary: brownSugar,
     secondary: sienna,
     accent : blue,
