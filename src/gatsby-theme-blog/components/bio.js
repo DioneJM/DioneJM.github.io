@@ -25,7 +25,7 @@ const Bio = () => {
 }
 
 const bioQuery = graphql`
-  query BioQuery {
+  query {
     site {
       siteMetadata {
         author

@@ -6,7 +6,7 @@ module.exports = {
         siteUrl: "https://localhost3000.link/",
         social: [
             {
-                name: "github",
+                name: "My github",
                 url: "https://github.com/DioneJM",
             },
         ],
@@ -17,6 +17,7 @@ module.exports = {
             options: {
                 // basePath defaults to `/`
                 basePath: `/blog`,
+                preset: "@theme-ui/preset-funk",
             },
         },
     ],

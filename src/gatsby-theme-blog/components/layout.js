@@ -5,7 +5,7 @@ import useBlogThemeConfig from "../hooks/configOptions"
 import Helmet from "react-helmet"
 import { SkipNavContent } from "@reach/skip-nav"
 
-const Layout = ({ children, ...props }) => {
+const BlogLayout = ({ children, ...props }) => {
   const blogThemeConfig = useBlogThemeConfig()
   const { webfontURL } = blogThemeConfig
 
@@ -18,12 +18,16 @@ const Layout = ({ children, ...props }) => {
       <SkipNavContent />
       <div>
         <div
-          css={css({
-            maxWidth: `container`,
+        css={css({
+            // maxWidth: `container`,
+            maxWidth: 650,
             mx: `auto`,
             px: 3,
             py: 4,
-          })}
+            margin: `3rem auto`,
+            padding: `0 1rem`,
+            minHeight: `100vh`,
+        })}
         >
           {children}
         </div>
@@ -32,4 +36,4 @@ const Layout = ({ children, ...props }) => {
   )
 }
 
-export default Layout
+export default BlogLayout
