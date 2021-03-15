@@ -40,7 +40,8 @@ const Post = ({
           <PostDate>{post.date}</PostDate>
         </header>
         <section style={{
-            color: cssVars.normalTextColour
+            color: cssVars.normalTextColour,
+            fontFamily: cssVars.normalTextFont
         }}>
           <MDXRenderer>{post.body}</MDXRenderer>
         </section>
