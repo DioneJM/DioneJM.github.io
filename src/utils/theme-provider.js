@@ -6,7 +6,9 @@ export const cssVariableNames = {
     backgroundColor: '--color-background',
     titleTextColour: '--color-text-title',
     normalTextColour: '--color-text-normal',
-    linkColour: '--color-text-link'
+    linkColour: '--color-text-link',
+    normalTextFont: '--normal-text-font',
+    quoteTextFont: '--quote-text-font'
 }
 
 const getCssVar = (variableName) => `var(${variableName})`;
@@ -15,7 +17,9 @@ export const cssVars = {
     backgroundColor: getCssVar(cssVariableNames.backgroundColor),
     titleTextColour: getCssVar(cssVariableNames.titleTextColour),
     normalTextColour: getCssVar(cssVariableNames.normalTextColour),
-    linkColour: getCssVar(cssVariableNames.linkColour)
+    linkColour: getCssVar(cssVariableNames.linkColour),
+    normalTextFont: getCssVar(cssVariableNames.normalTextFont),
+    quoteTextFont: getCssVar(cssVariableNames.quoteTextFont),
 }
 
 

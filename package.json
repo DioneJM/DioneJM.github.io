@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/DioneJM/DioneJM.github.io#readme",
   "dependencies": {
+    "@fontsource/inter": "^4.2.2",
+    "@fontsource/karla": "^4.2.2",
     "@reach/skip-nav": "^0.13.2",
     "@theme-ui/preset-funk": "^0.3.5",
     "gatsby": "^3.0.4",

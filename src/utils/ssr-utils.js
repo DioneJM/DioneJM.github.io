@@ -49,6 +49,17 @@ export const PreLoadThemeScript = () => {
                 ? '${theme.light.linkColour}'
                 : '${theme.dark.linkColour}'
         );
+        
+        root.style.setProperty(
+            '--normal-text-font',
+            'Inter'
+        );
+        
+        root.style.setProperty(
+            '--quote-text-font',
+            'Karla'
+        );
+
         root.style.setProperty('--initial-color-mode', colorMode);
     })()
     `
