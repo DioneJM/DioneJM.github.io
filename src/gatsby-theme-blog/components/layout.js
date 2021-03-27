@@ -4,7 +4,6 @@ import useBlogThemeConfig from "../hooks/configOptions"
 import { Helmet } from "react-helmet"
 import {SkipNavContent} from "@reach/skip-nav"
 import {cssVars, ThemeProvider} from "../../utils/theme-provider";
-import {ThemeSelector} from "../../components/theme-selector-button";
 
 const BlogLayout = ({children, ...props}) => {
     const blogThemeConfig = useBlogThemeConfig()
@@ -12,16 +11,15 @@ const BlogLayout = ({children, ...props}) => {
 
     return (
         <ThemeProvider>
+            <div style={{
+                minHeight: `100vh`,
+                backgroundColor: cssVars.backgroundColor,
+            }}>
             <Helmet>
                 <link rel="stylesheet" href={webfontURL}/>
             </Helmet>
             <Header {...props} />
             <SkipNavContent/>
-            <ThemeSelector/>
-            <div style={{
-                minHeight: `100vh`,
-                backgroundColor: cssVars.backgroundColor,
-            }}>
                 <div style={{
                     mx: `auto`,
                     px: 3,
@@ -31,7 +29,7 @@ const BlogLayout = ({children, ...props}) => {
                     maxWidth: 650,
                 }}>
                     {children}
-                </div>
+            </div>
             </div>
         </ThemeProvider>
     )

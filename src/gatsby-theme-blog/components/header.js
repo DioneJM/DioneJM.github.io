@@ -3,32 +3,12 @@ import { Link } from "gatsby"
 import { jsx, css, Styled } from "theme-ui"
 import Bio from "./bio"
 import { SkipNavLink } from "@reach/skip-nav"
+import {ThemeSelector} from "../../components/theme-selector-button";
+import React from "react";
 
 const rootPath = `${__PATH_PREFIX__}/`
 
 const Title = ({ children, location }) => {
-  if (location.pathname === rootPath) {
-    return (
-      <Styled.h1
-        css={css({
-          my: 0,
-          fontSize: 4,
-        })}
-      >
-        <Styled.a
-          as={Link}
-          css={css({
-            color: `inherit`,
-            boxShadow: `none`,
-            textDecoration: `none`,
-          })}
-          to={`/`}
-        >
-          {children}
-        </Styled.a>
-      </Styled.h1>
-    )
-  } else {
     return (
       <Styled.h3
         as="p"
@@ -49,7 +29,6 @@ const Title = ({ children, location }) => {
         </Styled.a>
       </Styled.h3>
     )
-  }
 }
 
 const Header = ({ children, title, ...props }) => (
@@ -73,6 +52,7 @@ const Header = ({ children, title, ...props }) => (
       >
         <Title {...props}>{title}</Title>
         {children}
+          <ThemeSelector/>
       </div>
       {props.location.pathname === rootPath && <Bio />}
     </div>
