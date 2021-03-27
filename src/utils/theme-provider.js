@@ -26,8 +26,12 @@ export const cssVars = {
 export const ThemeContext = React.createContext();
 export const ThemeProvider = ({ children }) => {
     const [colorMode, rawSetColorMode] = useState('light');
-    const root = window.document.documentElement;
     React.useEffect(() => {
+        if (typeof window === `undefined`) {
+            return;
+        }
+
+        const root = window.document.documentElement;
         const initialColorValue = root.style.getPropertyValue(
             '--initial-color-mode'
         );
@@ -46,7 +50,7 @@ export const ThemeProvider = ({ children }) => {
 };
 
 function updateThemeColors(themeMode, theme) {
-    if (!theme) {
+    if (!theme || typeof window === `undefined`) {
         return;
     }
     const root = window.document.documentElement;

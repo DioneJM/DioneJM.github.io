@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "./header"
 import useBlogThemeConfig from "../hooks/configOptions"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 import {SkipNavContent} from "@reach/skip-nav"
 import {cssVars, ThemeProvider} from "../../utils/theme-provider";
 import {ThemeSelector} from "../../components/theme-selector-button";
