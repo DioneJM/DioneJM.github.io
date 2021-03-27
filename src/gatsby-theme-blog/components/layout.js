@@ -1,16 +1,14 @@
 import React from "react"
 import Header from "./header"
-import { Helmet } from "react-helmet"
 import {SkipNavContent} from "@reach/skip-nav"
-import {cssVars, ThemeProvider} from "../../utils/theme-provider";
+import { ThemeProvider} from "../../utils/theme-provider";
+import Helmet from "../../components/helmet";
 
 const BlogLayout = ({children, ...props}) => {
 
     return (
         <ThemeProvider>
-            <Helmet>
-                <style>{`body { background-color: ${cssVars.backgroundColor}; }`}</style>
-            </Helmet>
+            <Helmet/>
             <Header {...props} />
             <SkipNavContent/>
                 <div style={{
