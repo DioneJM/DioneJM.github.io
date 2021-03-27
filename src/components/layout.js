@@ -1,11 +1,15 @@
 import React from "react"
 import {cssVars, ThemeProvider} from "../utils/theme-provider";
 import {ThemeSelector} from "./theme-selector-button";
+import {Helmet} from "react-helmet";
 
 
 export default function Layout({children}) {
     return (
         <ThemeProvider>
+            <Helmet>
+                <style>{`body { background-color: ${cssVars.backgroundColor}; }`}</style>
+            </Helmet>
             <div style={{
                 minHeight: `100vh`,
                 backgroundColor: cssVars.backgroundColor,

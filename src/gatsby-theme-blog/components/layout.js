@@ -1,22 +1,15 @@
 import React from "react"
 import Header from "./header"
-import useBlogThemeConfig from "../hooks/configOptions"
 import { Helmet } from "react-helmet"
 import {SkipNavContent} from "@reach/skip-nav"
 import {cssVars, ThemeProvider} from "../../utils/theme-provider";
 
 const BlogLayout = ({children, ...props}) => {
-    const blogThemeConfig = useBlogThemeConfig()
-    const {webfontURL} = blogThemeConfig
 
     return (
         <ThemeProvider>
-            <div style={{
-                minHeight: `100vh`,
-                backgroundColor: cssVars.backgroundColor,
-            }}>
             <Helmet>
-                <link rel="stylesheet" href={webfontURL}/>
+                <style>{`body { background-color: ${cssVars.backgroundColor}; }`}</style>
             </Helmet>
             <Header {...props} />
             <SkipNavContent/>
@@ -29,7 +22,6 @@ const BlogLayout = ({children, ...props}) => {
                     maxWidth: 650,
                 }}>
                     {children}
-            </div>
             </div>
         </ThemeProvider>
     )

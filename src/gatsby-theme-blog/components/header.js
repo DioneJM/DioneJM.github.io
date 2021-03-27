@@ -33,7 +33,6 @@ const Title = ({ children, location }) => {
 
 const Header = ({ children, title, ...props }) => (
   <header>
-    <SkipNavLink sx={{ variant: `styles.a` }} />
     <div
       css={css({
         maxWidth: `container`,
