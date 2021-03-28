@@ -23,12 +23,15 @@ const CustomSlider = withStyles({
 })(Switch);
 
 const Switchidoo = () => {
-    const backgroundColor = window.getComputedStyle(document.documentElement).getPropertyValue(cssVariableNames.backgroundColor)
+    const backgroundColor = typeof window === 'undefined' ? null : window.getComputedStyle(document.documentElement).getPropertyValue(cssVariableNames.backgroundColor)
     const [darkModeSelected, setDarkModeSelected] = React.useState(backgroundColor === darkTheme.background)
     const {colorMode, setColorMode} = React.useContext(ThemeContext);
     const tooltipText = darkModeSelected ? 'Switch to light mode' : 'Switch to dark mode';
 
     React.useEffect(() => {
+        if (typeof window === 'undefined') {
+            return;
+        }
         const backgroundColor = window.getComputedStyle(document.documentElement).getPropertyValue(cssVariableNames.backgroundColor)
         setDarkModeSelected(backgroundColor === darkTheme.background);
     }, [backgroundColor, colorMode])
