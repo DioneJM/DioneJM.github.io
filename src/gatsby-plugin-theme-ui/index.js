@@ -6,13 +6,8 @@ const brownSugar = `#C47245`;
 const sienna = `#CE8964`;
 const brownWhite = `#FAF3EF`;
 
-export default {
-    // colors: {
-    //     text: sienna,
-    //     primary: brownSugar,
-    //     heading: blue,
-    // },
-}
+const thingo = {}
+export default thingo;
 
 
 /**

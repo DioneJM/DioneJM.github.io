@@ -1,5 +1,5 @@
 import React from "react"
-import {cssVars, ThemeContext, ThemeProvider} from "../utils/theme-provider";
+import {ThemeProvider} from "../utils/theme-provider";
 import {ThemeSelector} from "./theme-selector-button";
 import Helmet from "./helmet";
 

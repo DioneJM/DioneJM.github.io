@@ -41,9 +41,9 @@ const Switchidoo = () => {
 
 export const ThemeSelector = () => {
     return (
-        <label>
+        <div>
             <Switchidoo/>
-        </label>
+        </div>
     );
 };
 

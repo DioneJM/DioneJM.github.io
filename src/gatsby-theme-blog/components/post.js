@@ -8,7 +8,7 @@ import PostTitle from "./post-title"
 import PostDate from "./post-date"
 import PostFooter from "./post-footer"
 import PostHero from "./post-hero"
-import {cssVariableNames, cssVars} from "../../utils/theme-provider";
+import {cssVars} from "../../utils/theme-provider";
 
 const Post = ({
   data: {
