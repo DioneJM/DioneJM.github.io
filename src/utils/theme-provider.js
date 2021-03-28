@@ -23,7 +23,7 @@ export const cssVars = {
 }
 
 
-export const ThemeContext = React.createContext();
+export const ThemeContext = React.createContext({});
 export const ThemeProvider = ({ children }) => {
     const [colorMode, rawSetColorMode] = useState('light');
     React.useEffect(() => {
@@ -40,7 +40,6 @@ export const ThemeProvider = ({ children }) => {
     const setColorMode = (themeMode) => {
         rawSetColorMode(themeMode);
         updateThemeColors(themeMode, themeMode === 'light' ? theme.light : theme.dark);
-
     };
     return (
         <ThemeContext.Provider value={{ colorMode, setColorMode }}>

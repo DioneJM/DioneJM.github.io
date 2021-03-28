@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui"
-import { Link } from "gatsby"
+import {Styled, jsx} from "theme-ui"
+import {Link} from "gatsby"
 import {cssVars} from "../../utils/theme-provider";
 
 const PostLink = ({ title, slug, date, excerpt }) => (
