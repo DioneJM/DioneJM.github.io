@@ -8,7 +8,6 @@ const Helmet = () => {
     const darkModeSelected = colorMode === 'dark';
 
     const backgroundColor = darkModeSelected ? darkTheme.background : lightTheme.background;
-    const accentColor = darkModeSelected ? darkTheme.accent : lightTheme.accent;
 
     const style = () => {
         return <style>
