@@ -1,7 +1,6 @@
 import React from "react"
 import Header from "./header"
-import {SkipNavContent} from "@reach/skip-nav"
-import { ThemeProvider} from "../../utils/theme-provider";
+import {ThemeProvider} from "../../utils/theme-provider";
 import Helmet from "../../components/helmet";
 
 const BlogLayout = ({children, ...props}) => {
@@ -10,16 +9,15 @@ const BlogLayout = ({children, ...props}) => {
         <ThemeProvider>
             <Helmet/>
             <Header {...props} />
-            <SkipNavContent/>
-                <div style={{
-                    mx: `auto`,
-                    px: 3,
-                    py: 4,
-                    margin: `3rem auto`,
-                    padding: `0 1rem`,
-                    maxWidth: 650,
-                }}>
-                    {children}
+            <div style={{
+                mx: `auto`,
+                px: 3,
+                py: 4,
+                margin: `3rem auto`,
+                padding: `0 1rem`,
+                maxWidth: 650,
+            }}>
+                {children}
             </div>
         </ThemeProvider>
     )

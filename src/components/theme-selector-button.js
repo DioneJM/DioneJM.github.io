@@ -1,5 +1,7 @@
 import React from "react";
 import {ThemeContext} from "../utils/theme-provider";
+import {darkTheme, lightTheme} from "../gatsby-plugin-theme-ui";
+import {Switch, Tooltip, withStyles} from '@material-ui/core';
 
 const CustomSlider = withStyles({
     root: {
@@ -23,6 +25,21 @@ const CustomSlider = withStyles({
 const Switchidoo = () => {
     const {colorMode, setColorMode} = React.useContext(ThemeContext);
     const darkModeSelected = colorMode === 'dark';
+    const tooltipText = darkModeSelected ? 'Switch to light mode' : 'Switch to dark mode';
+
+    return <Tooltip title={tooltipText}>
+        <CustomSlider checked={darkModeSelected}
+                      checkedIcon={<MoonIcon/>}
+                      icon={<SunIcon/>}
+                      size={'small'}
+                      onClick={(_) => {
+                          setColorMode(darkModeSelected ? 'light' : 'dark');
+                      }}
+        />
+    </Tooltip>
+}
+
+export const ThemeSelector = () => {
     return (
         <label>
             <Switchidoo/>
