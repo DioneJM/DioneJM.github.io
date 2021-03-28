@@ -9,12 +9,10 @@ export default function Layout({children}) {
         <ThemeProvider>
             <Helmet/>
             <div style={{
-                mx: `auto`,
-                px: 3,
-                py: 4,
                 margin: `3rem auto`,
+                maxWidth: '33vw',
                 padding: `0 1rem`,
-                maxWidth: 650,
+                color: cssVars.normalTextColour,
             }}>
                 <ThemeSelector/>
                 {children}

@@ -3,7 +3,7 @@ import {ThemeContext} from "../utils/theme-provider";
 import {Helmet as ReactHelmet} from "react-helmet";
 import {darkTheme, lightTheme} from "../gatsby-plugin-theme-ui";
 
-const Helmet = () => {
+const Helmet= () => {
     const {colorMode} = React.useContext(ThemeContext);
     const darkModeSelected = colorMode === 'dark';
 
@@ -15,7 +15,6 @@ const Helmet = () => {
                 body { background-color: ${backgroundColor}; }
             `}
         </style>
-
     }
 
     return <ReactHelmet>
