@@ -2,12 +2,13 @@
 import { Link } from "gatsby"
 import { jsx, css, Styled } from "theme-ui"
 import Bio from "./bio"
-import ThemeSelector from "../../components/theme-selector-button";
+import { SkipNavLink } from "@reach/skip-nav"
+import {ThemeSelector} from "../../components/theme-selector-button";
 import React from "react";
 
 const rootPath = `${__PATH_PREFIX__}/`
 
-const Title = ({ children }) => {
+const Title = ({ children, location }) => {
     return (
       <Styled.h3
         as="p"

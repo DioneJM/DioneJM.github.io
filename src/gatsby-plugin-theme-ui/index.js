@@ -6,6 +6,15 @@ const brownSugar = `#C47245`;
 const sienna = `#CE8964`;
 const brownWhite = `#FAF3EF`;
 
+export default {
+    // colors: {
+    //     text: sienna,
+    //     primary: brownSugar,
+    //     heading: blue,
+    // },
+}
+
+
 /**
  * @type {{secondary: string, main: string, accent: string, primary: string}}
  * primary: primary color e.g. for article title
