@@ -1,8 +1,8 @@
 import React from "react"
 import Header from "./header"
 import Helmet from "../helmet/helmet";
-import {ThemeProvider, useThemeUI, useColorMode} from 'theme-ui'
-import HomeLink from "../home-link";
+import {Grid} from "@material-ui/core";
+import {ThemeProvider, useColorMode} from "theme-ui";
 
 
 const BlogLayout = ({children, ...props}) => {
@@ -11,9 +11,7 @@ const BlogLayout = ({children, ...props}) => {
     return (
         <ThemeProvider>
             <Helmet/>
-            <Header {...props} >
-                <HomeLink/>
-            </Header>
+            <Header {...props}/>
             <div style={{
                 mx: `auto`,
                 px: 3,

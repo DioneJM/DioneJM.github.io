@@ -1,6 +1,6 @@
 import React from "react";
 import {darkTheme, lightTheme} from "../gatsby-plugin-theme-ui";
-import {Checkbox, Switch, Tooltip, withStyles} from '@material-ui/core';
+import {Checkbox, Tooltip} from '@material-ui/core';
 import {useColorMode} from 'theme-ui';
 
 const Switchidoo = () => {

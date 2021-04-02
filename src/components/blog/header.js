@@ -1,8 +1,10 @@
 import {ThemeSelector} from "../../components/theme-selector-button";
 import React from "react";
 import {Grid as MuiGrid} from "@material-ui/core";
+import HomeLink from "../website-links/home-link";
+import PostLink from "../website-links/post-link";
 
-const Header = ({children, title, ...props}) => {
+const HeaderInner = ({children, title, ...props}) => {
     return <header style={{
         position: 'sticky',
         top: 0,
@@ -12,13 +14,36 @@ const Header = ({children, title, ...props}) => {
         <Grid container fullHeight>
             <Grid item xs={4}/>
             <Grid container fullHeight item xs={4} direction={'row'} justify={'center'} alignItems={'center'}>
-                    {children}
+                {children}
             </Grid>
             <Grid container item fullHeight xs={4} direction={'row'} justify={'center'} alignItems={'center'}>
                 <ThemeSelector/>
             </Grid>
         </Grid>
     </header>
+}
+
+const Header = (props) => {
+    const headerLinks = [
+        <HomeLink/>,
+        <PostLink/>
+    ];
+
+    return <HeaderInner {...props} >
+        {headerLinks.map((link, index) => {
+            if (headerLinks[index + 1]) {
+                return <Grid style={{
+                    paddingRight: '4px',
+                    marginRight: '4px',
+                    borderRight: '2px solid'
+                }}>
+                    {link}
+                </Grid>
+            }
+            return link;
+        })}
+    </HeaderInner>
+
 }
 
 const Grid = ({fullHeight, children, ...props}) => {
