@@ -17,29 +17,18 @@ const brownWhite = `#FAF3EF`;
 export const theme = {
     dark: {
         backgroundColor: black,
-        titleTextColour: blue,
-        normalTextColour: lightBlue,
+        headerColor: '#141414',
+        titleTextColour: '#799BB9',
+        normalTextColour: '#D7E1EA',
         linkColour: cream
     },
     light: {
         backgroundColor: brownWhite,
+        headerColor: '#8C4D2C',
         titleTextColour: brownSugar,
         normalTextColour: sienna,
         linkColour: blue
     }
-}
-export const darkTheme = {
-    primary: blue,
-    secondary: lightBlue,
-    accent: cream,
-    background: black,
-}
-
-export const lightTheme = {
-    primary: brownSugar,
-    secondary: sienna,
-    accent : blue,
-    background: brownWhite
 }
 
 const defaultTheme = {

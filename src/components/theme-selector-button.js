@@ -1,5 +1,5 @@
 import React from "react";
-import {darkTheme, lightTheme} from "../gatsby-plugin-theme-ui";
+import {theme} from "../gatsby-plugin-theme-ui";
 import {Checkbox, Tooltip} from '@material-ui/core';
 import {useColorMode} from 'theme-ui';
 
@@ -31,7 +31,7 @@ export const ThemeSelector = () => {
 const iconSize = 24;
 const SunIcon = () => {
     return <svg xmlns="http://www.w3.org/2000/svg" style={{
-        fill: `${lightTheme.secondary}`
+        fill: `${theme.light.normalTextColour}`
     }} height={iconSize} width={iconSize} viewBox="0 0 24 24">
         <path d="M0 0h24v24H0z" fill="none"/>
         <path
@@ -40,7 +40,7 @@ const SunIcon = () => {
 }
 const MoonIcon = () => {
     return <svg xmlns="http://www.w3.org/2000/svg" style={{
-        fill: `${darkTheme.secondary}`
+        fill: `${theme.dark.normalTextColour}`
     }} height={iconSize} width={iconSize} viewBox="0 0 24 24">
         <rect fill="none" height="24" width="24"/>
         <path
