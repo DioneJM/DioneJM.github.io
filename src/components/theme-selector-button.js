@@ -1,7 +1,7 @@
 import React from "react";
-import {cssVariableNames, ThemeContext} from "../utils/theme-provider";
 import {darkTheme, lightTheme} from "../gatsby-plugin-theme-ui";
 import {Switch, Tooltip, withStyles} from '@material-ui/core';
+import {useColorMode} from 'theme-ui';
 
 const CustomSlider = withStyles({
     root: {
@@ -23,18 +23,9 @@ const CustomSlider = withStyles({
 })(Switch);
 
 const Switchidoo = () => {
-    const backgroundColor = typeof window === 'undefined' ? null : window.getComputedStyle(document.documentElement).getPropertyValue(cssVariableNames.backgroundColor)
-    const [darkModeSelected, setDarkModeSelected] = React.useState(backgroundColor === darkTheme.background)
-    const {colorMode, setColorMode} = React.useContext(ThemeContext);
+    const [colorMode, setColorMode] = useColorMode()
+    const darkModeSelected = colorMode === 'dark';
     const tooltipText = darkModeSelected ? 'Switch to light mode' : 'Switch to dark mode';
-
-    React.useEffect(() => {
-        if (typeof window === 'undefined') {
-            return;
-        }
-        const backgroundColor = window.getComputedStyle(document.documentElement).getPropertyValue(cssVariableNames.backgroundColor)
-        setDarkModeSelected(backgroundColor === darkTheme.background);
-    }, [backgroundColor, colorMode])
 
     return <Tooltip title={tooltipText}>
         <CustomSlider checked={darkModeSelected}
@@ -42,7 +33,6 @@ const Switchidoo = () => {
                       icon={<SunIcon/>}
                       size={'small'}
                       onClick={(event) => {
-                          setDarkModeSelected(event.target.checked);
                           setColorMode(event.target.checked ? 'dark' : 'light');
                       }}
         />

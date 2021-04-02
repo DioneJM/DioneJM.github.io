@@ -50,10 +50,12 @@ export default {
         text: theme.light.normalTextColour,
         background: theme.light.backgroundColor,
         primary: theme.light.normalTextColour,
+        random: 'blue',
         modes: {
             dark: {
                 text: theme.dark.normalTextColour,
                 background: theme.dark.backgroundColor,
+                random: 'green',
                 primary: theme.dark.normalTextColour
             },
         }

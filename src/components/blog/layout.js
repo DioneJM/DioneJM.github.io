@@ -2,19 +2,18 @@ import React from "react"
 import Header from "./header"
 import Helmet from "../helmet/helmet";
 import {ThemeProvider, useThemeUI, useColorMode} from 'theme-ui'
+import HomeLink from "../home-link";
 
 
 const BlogLayout = ({children, ...props}) => {
-    const [colorMode, setColorMode] = useColorMode()
-
-    const {theme: {initialColorModeName, colors: {modes}}} = useThemeUI()
-    const modeKeys = Object.keys(modes)
-    const allModes = [initialColorModeName, ...modeKeys]
+    const [colorMode] = useColorMode()
 
     return (
         <ThemeProvider>
             <Helmet/>
-            <Header {...props} />
+            <Header {...props} >
+                <HomeLink/>
+            </Header>
             <div style={{
                 mx: `auto`,
                 px: 3,
@@ -24,13 +23,6 @@ const BlogLayout = ({children, ...props}) => {
                 maxWidth: 650,
             }}>
                 <h3>Color Mode is: {colorMode}</h3>
-                <select onChange={e => {
-                    setColorMode(e.target.value)
-                }} value={colorMode}>
-                    {allModes.map(mode => (
-                        <option value={mode} key={mode}>{mode}</option>
-                    ))}
-                </select>
                 {children}
             </div>
         </ThemeProvider>
