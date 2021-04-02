@@ -1,13 +1,14 @@
 import React from "react"
-import {ThemeProvider} from "../utils/theme-provider";
-import {ThemeSelector} from "./theme-selector-button";
-import Helmet from "./helmet";
+import Header from "./header"
+import {ThemeProvider} from "../../utils/theme-provider";
+import Helmet from "../../components/helmet";
 
+const BlogLayout = ({children, ...props}) => {
 
-export default function Layout({children}) {
     return (
         <ThemeProvider>
             <Helmet/>
+            <Header {...props} />
             <div style={{
                 mx: `auto`,
                 px: 3,
@@ -21,3 +22,5 @@ export default function Layout({children}) {
         </ThemeProvider>
     )
 }
+
+export default BlogLayout

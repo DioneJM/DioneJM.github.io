@@ -1,13 +1,4 @@
 import React from "react"
-
-import PostLink from "./post-link"
-
-const PostList = ({ posts }) => (
-  <>
-    {posts.map((node) => (
-      <PostLink key={node.slug} {...node} />
-    ))}
-  </>
-)
+import PostList from "../../components/blog/post-list";
 
 export default PostList
