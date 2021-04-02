@@ -42,22 +42,24 @@ export const lightTheme = {
     background: brownWhite
 }
 
-export default {
+const defaultTheme = {
     initialColorModeName: 'light',
     useColorSchemeMediaQuery: true,
     useCustomProperties: true,
     colors: {
         text: theme.light.normalTextColour,
         background: theme.light.backgroundColor,
-        primary: theme.light.normalTextColour,
-        random: 'blue',
+        primary: theme.light.linkColour,
+        highlight: theme.light.linkColour,
         modes: {
             dark: {
                 text: theme.dark.normalTextColour,
                 background: theme.dark.backgroundColor,
-                random: 'green',
-                primary: theme.dark.normalTextColour
+                primary: theme.dark.linkColour,
+                highlight: theme.dark.linkColour,
             },
         }
     }
 };
+
+export default defaultTheme;

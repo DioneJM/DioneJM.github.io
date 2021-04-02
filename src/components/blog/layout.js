@@ -3,13 +3,14 @@ import Header from "./header"
 import Helmet from "../helmet/helmet";
 import {Grid} from "@material-ui/core";
 import {ThemeProvider, useColorMode} from "theme-ui";
+import defaultTheme from "../../gatsby-plugin-theme-ui";
 
 
 const BlogLayout = ({children, ...props}) => {
     const [colorMode] = useColorMode()
 
     return (
-        <ThemeProvider>
+        <ThemeProvider theme={defaultTheme}>
             <Helmet/>
             <Header {...props}/>
             <div style={{

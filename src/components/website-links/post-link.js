@@ -1,28 +1,8 @@
-import {css, Styled} from "theme-ui";
-import {Link} from "gatsby";
 import React from "react";
+import WebsiteLink from "./website-link";
 
 const PostLink = () => {
-    return (
-        <Styled.h3
-            as="p"
-            css={css({
-                my: 0,
-            })}
-        >
-            <Styled.a
-                as={Link}
-                css={css({
-                    boxShadow: `none`,
-                    textDecoration: `none`,
-                    color: `primary`,
-                })}
-                to={`/blog`}
-            >
-                {'Posts'}
-            </Styled.a>
-        </Styled.h3>
-    )
+    return <WebsiteLink route={'/blog'} label={'Posts'}/>
 }
 
 export default PostLink;
