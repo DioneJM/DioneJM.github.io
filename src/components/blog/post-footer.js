@@ -3,7 +3,6 @@ import {Link} from "gatsby"
 import {css, Styled, Flex} from "theme-ui"
 
 import Bio from "./bio"
-import {cssVars} from "../../utils/theme-provider";
 
 const PostFooter = ({previous, next}) => (
     <footer
@@ -28,7 +27,6 @@ const PostFooter = ({previous, next}) => (
                     {previous && (
                         <Styled.a as={Link}
                                   to={previous.slug}
-                                  style={{color: cssVars.linkColour}}
                                   rel="prev">
                             ← {previous.title}
                         </Styled.a>
@@ -38,7 +36,6 @@ const PostFooter = ({previous, next}) => (
                     {next && (
                         <Styled.a as={Link}
                                   to={next.slug}
-                                  style={{color: cssVars.linkColour}}
                                   rel="next">
                             {next.title} →
                         </Styled.a>

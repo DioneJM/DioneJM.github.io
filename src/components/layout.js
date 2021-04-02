@@ -1,10 +1,16 @@
 import React from "react"
-import {ThemeProvider} from "../utils/theme-provider";
-import {ThemeSelector} from "./theme-selector-button";
-import Helmet from "./helmet";
+import Helmet from "./helmet/helmet";
+import PropTypes from "prop-types"
+import {useThemeUI, useColorMode} from 'theme-ui'
+import { ThemeProvider } from 'theme-ui'
 
+const Layout = ({children}) => {
+    const [colorMode, setColorMode] = useColorMode()
 
-export default function Layout({children}) {
+    const {theme: {initialColorModeName, colors: {modes}}} = useThemeUI()
+    const modeKeys = Object.keys(modes)
+    const allModes = [initialColorModeName, ...modeKeys]
+
     return (
         <ThemeProvider>
             <Helmet/>
@@ -16,8 +22,24 @@ export default function Layout({children}) {
                 padding: `0 1rem`,
                 maxWidth: 650,
             }}>
-                {children}
+                <h3>Color Mode is: {colorMode}</h3>
+                <select onChange={e => {
+                    setColorMode(e.target.value)
+                }} value={colorMode}>
+                    {allModes.map(mode => (
+                        <option value={mode} key={mode}>{mode}</option>
+                    ))}
+                </select>
+                <div>
+                    <main>{children}</main>
+                </div>
             </div>
         </ThemeProvider>
     )
 }
+
+Layout.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
+export default Layout

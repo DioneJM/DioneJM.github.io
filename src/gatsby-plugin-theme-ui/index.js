@@ -6,10 +6,6 @@ const brownSugar = `#C47245`;
 const sienna = `#CE8964`;
 const brownWhite = `#FAF3EF`;
 
-const thingo = {}
-export default thingo;
-
-
 /**
  * @type {{secondary: string, main: string, accent: string, primary: string}}
  * primary: primary color e.g. for article title
@@ -45,3 +41,21 @@ export const lightTheme = {
     accent : blue,
     background: brownWhite
 }
+
+export default {
+    initialColorModeName: 'light',
+    useColorSchemeMediaQuery: true,
+    useCustomProperties: true,
+    colors: {
+        text: theme.light.normalTextColour,
+        background: theme.light.backgroundColor,
+        primary: theme.light.normalTextColour,
+        modes: {
+            dark: {
+                text: theme.dark.normalTextColour,
+                background: theme.dark.backgroundColor,
+                primary: theme.dark.normalTextColour
+            },
+        }
+    }
+};

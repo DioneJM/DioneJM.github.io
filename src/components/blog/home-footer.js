@@ -1,12 +1,10 @@
 import React, { Fragment } from "react"
 import { Styled, css } from "theme-ui"
-import {cssVars} from "../../utils/theme-provider";
 
 const Footer = ({ socialLinks }) => (
   <footer css={css({
       mt: 4,
-      pt: 3,
-      color: cssVars.normalTextColour
+      pt: 3
     })}
   >
     © {new Date().getFullYear()}, Powered by
@@ -18,7 +16,6 @@ const Footer = ({ socialLinks }) => (
           <Fragment key={platform.url}>
             <Styled.a
               href={platform.url}
-              style={{color: cssVars.linkColour}}
               target="_blank"
               rel="noopener noreferrer"
             >

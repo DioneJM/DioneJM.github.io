@@ -8,7 +8,6 @@ import PostTitle from "./post-title"
 import PostDate from "./post-date"
 import PostFooter from "./post-footer"
 import PostHero from "./post-hero"
-import {cssVars} from "../../utils/theme-provider";
 
 const Post = ({
   data: {
@@ -39,10 +38,7 @@ const Post = ({
           <PostTitle>{post.title}</PostTitle>
           <PostDate>{post.date}</PostDate>
         </header>
-        <section style={{
-            color: cssVars.normalTextColour,
-            fontFamily: cssVars.normalTextFont
-        }}>
+        <section>
           <MDXRenderer>{post.body}</MDXRenderer>
         </section>
       </article>

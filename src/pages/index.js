@@ -2,23 +2,16 @@ import React from "react"
 import '@fontsource/inter';
 import '@fontsource/karla';
 import Layout from "../components/layout";
-import {cssVars} from "../utils/theme-provider";
 
 
 export default function Home() {
     const [count, setCount] = React.useState(0);
     return <Layout>
-        <div style={{
-            color: cssVars.titleTextColour
-        }}>
-            <div style={{
-                fontFamily: cssVars.normalTextFont
-            }}>
+        <div>
+            <div>
                 Hello from Gatsby! This is in Inter
             </div>
-            <div style={{
-                fontFamily: cssVars.quoteTextFont
-            }}>
+            <div>
                 Hello from Gatsby! This is in Karla
             </div>
         </div>
