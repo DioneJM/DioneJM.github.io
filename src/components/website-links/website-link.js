@@ -18,6 +18,7 @@ const WebsiteLink = ({ route, label }) => {
                     boxShadow: `none`,
                     textDecoration: `none`,
                     color: getThemeColor('linkColour'),
+                    fontWeight: 'bold',
                 })}
                 to={route}
             >
