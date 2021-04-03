@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import {Styled, jsx} from "theme-ui"
 import {Link} from "gatsby"
-import { useThemeUI } from 'theme-ui'
 import useThemeColors from "../../hooks/useThemeColors";
 
 

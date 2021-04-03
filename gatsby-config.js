@@ -11,14 +11,27 @@ module.exports = {
             },
         ],
     },
-    plugins: [
-        {
-            resolve: `gatsby-theme-blog`,
-            options: {
-                // basePath defaults to `/`
-                basePath: `/blog`,
-                // preset: "@theme-ui/preset-funk",
-            },
-        },
-],
-}
+  plugins: [
+    `gatsby-plugin-styled-components`,
+      {
+          resolve: 'gatsby-plugin-material-ui',
+          // If you want to use styled components you should change the injection order.
+          options: {
+              stylesProvider: {
+                injectFirst: true,
+              },
+          },
+      },
+      `gatsby-plugin-mdx`,
+      {
+          resolve: 'gatsby-source-filesystem',
+          options: {
+              name: 'posts',
+              path: `${__dirname}/src/pages/posts`,
+          },
+      },
+      // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
+  ],
+};

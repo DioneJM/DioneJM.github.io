@@ -1,18 +1,15 @@
 import {ThemeSelector} from "../../components/theme-selector-button";
-import React from "react";
-import {Grid as MuiGrid} from "@material-ui/core";
+import React, {useEffect, useState} from "react";
+import {Fade, Grid as MuiGrid} from "@material-ui/core";
 import PostLink from "../website-links/post-link";
-import useThemeColors from "../../hooks/useThemeColors";
 import LogoLink from "../website-links/logo-link";
 
 const HeaderInner = ({children, title, ...props}) => {
-    const {getThemeColor} = useThemeColors();
     return <header style={{
         position: 'sticky',
         top: 0,
         zIndex: 5,
-        height: '10vh',
-        backgroundColor: getThemeColor('backgroundColor')
+        height: '10vh'
     }}>
         <Grid container fullHeight>
             <Grid container item xs={3} direction={'row'} justify={'center'} alignItems={'center'}>
@@ -33,16 +30,16 @@ const Header = (props) => {
         <PostLink/>
     ];
 
-    return <HeaderInner {...props} >
+    return <HeaderInner {...props}>
         {headerLinks.map((link, index) => {
             if (headerLinks[index + 1]) {
-                return <Grid key={index} style={{
+                return <div key={index} style={{
                     paddingRight: '26px',
                 }}>
-                    <Grid key={index}>
+                    <div key={index}>
                         {link}
-                    </Grid>
-                </Grid>
+                    </div>
+                </div>
             }
             return link;
         })}

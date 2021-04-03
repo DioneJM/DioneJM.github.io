@@ -1,11 +1,10 @@
+/** @jsx jsx */
 import React from "react"
-import { Styled } from "theme-ui"
+import { Styled, jsx } from "theme-ui"
 import useThemeColors from "../../hooks/useThemeColors";
 
 const PostTitle = (props) => {
-    const { getThemeColor } = useThemeColors();
-    return <Styled.h1 style={{
-        color: getThemeColor('titleTextColour')
+    return <Styled.h1 sx={{
     }}{...props}/>
 }
 

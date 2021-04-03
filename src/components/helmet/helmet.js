@@ -4,6 +4,7 @@ import {Helmet as ReactHelmet} from "react-helmet";
 const Helmet = () => {
 
     return <ReactHelmet>
+        <noscript/>
     </ReactHelmet>
 }
 

@@ -1,6 +1,8 @@
-import useThemeColors from "../../hooks/useThemeColors";
-import React from "react";
+/** @jsx jsx */
+import React, {useEffect, useState} from "react";
+import {jsx} from "theme-ui";
 import WebsiteLink from "./website-link";
+import useThemeColors from "../../hooks/useThemeColors";
 
 const LogoLink = () => {
     return <WebsiteLink route={'/'} label={<div style={{

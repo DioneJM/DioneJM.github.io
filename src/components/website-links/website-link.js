@@ -1,10 +1,9 @@
-import {css, Styled} from "theme-ui";
+/** @jsx jsx */
+import {jsx, css, Styled} from "theme-ui";
 import {Link} from "gatsby";
 import React from "react";
-import useThemeColors from "../../hooks/useThemeColors";
 
 const WebsiteLink = ({ route, label }) => {
-    const { getThemeColor } = useThemeColors();
     return (
         <Styled.h3
             as="p"
@@ -17,7 +16,7 @@ const WebsiteLink = ({ route, label }) => {
                 css={css({
                     boxShadow: `none`,
                     textDecoration: `none`,
-                    color: getThemeColor('linkColour'),
+                    color: 'highlight',
                     fontWeight: 'bold',
                 })}
                 to={route}

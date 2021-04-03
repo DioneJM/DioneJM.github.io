@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "Personal Website",
   "main": "index.js",
-  "scripts": {
-    "test": "echo testing...",
-    "build": "gatsby develop",
-    "deploy": "gatsby build && gh-pages -d public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DioneJM/DioneJM.github.io.git"
@@ -18,21 +13,28 @@
     "url": "https://github.com/DioneJM/DioneJM.github.io/issues"
   },
   "homepage": "https://github.com/DioneJM/DioneJM.github.io#readme",
+  "scripts": {
+    "test": "echo testing...",
+    "build": "gatsby develop",
+    "build:prod": "gatsby build && gatsby serve",
+    "deploy": "gatsby build && gh-pages -d public"
+  },
   "dependencies": {
-    "@fontsource/inter": "^4.2.2",
-    "@fontsource/karla": "^4.2.2",
     "@material-ui/core": "^4.11.3",
-    "@reach/skip-nav": "^0.13.2",
-    "@theme-ui/preset-funk": "^0.3.5",
-    "gatsby": "^3.0.4",
-    "gatsby-image": "^3.0.0",
-    "gatsby-plugin-mdx": "^2.0.1",
-    "gatsby-theme-blog": "2.0.5",
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "babel-plugin-styled-components": "^1.10.7",
+    "gatsby": "^2.20.12",
+    "gatsby-plugin-material-ui": "^3.0.0",
+    "gatsby-plugin-mdx": "^2.2.0",
+    "gatsby-plugin-styled-components": "^3.2.1",
+    "gatsby-source-filesystem": "^3.2.0",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
-    "theme-ui": "^0.3.5"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^5.1.0",
+    "terser": "^4.6.11"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0"

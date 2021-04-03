@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React, { Fragment } from "react"
-import { Styled, css } from "theme-ui"
+import { Styled, css, jsx } from "theme-ui"
 import useThemeColors from "../../hooks/useThemeColors";
 
 const Footer = ({ socialLinks }) => {
@@ -11,7 +12,7 @@ const Footer = ({ socialLinks }) => {
   >
     © {new Date().getFullYear()}, Powered by
     {` `}
-    <Styled.a style={{color: getThemeColor('linkColour')}}href="https://www.gatsbyjs.com">Gatsby</Styled.a>
+    <Styled.a style={{color: getThemeColor('linkColour')}} href="https://www.gatsbyjs.com">Gatsby</Styled.a>
     {` `}&bull;{` `}
     {socialLinks
       ? socialLinks.map((platform, i, arr) => (
