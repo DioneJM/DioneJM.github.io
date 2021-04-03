@@ -7,7 +7,6 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { css, Flex } from "theme-ui"
 
 const Bio = () => {
   const data = useStaticQuery(bioQuery)
@@ -18,12 +17,9 @@ const Bio = () => {
   } = data
 
   return (
-    <Flex css={css({
-        mb: 4,
-        alignItems: `center`
-    })}>
+    <div>
         Bio: {`${author}`}
-    </Flex>
+    </div>
   )
 }
 

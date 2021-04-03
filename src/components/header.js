@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ThemeContext } from './theme-context';
-
 import {ThemeSelector} from "./theme-selector-button";
 
 const Header = ({ siteTitle }) => {

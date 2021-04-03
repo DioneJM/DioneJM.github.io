@@ -7,7 +7,7 @@ import BrightTitle from '../components/bright-title';
 const IndexPage = () => (
     <Layout>
         <BrightTitle>Hello world!</BrightTitle>
-        <Link to="/blog/">Go to blog</Link>
+        <Link to="/posts/">Go to blog</Link>
     </Layout>
 );
 

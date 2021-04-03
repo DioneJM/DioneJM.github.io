@@ -1,6 +1,6 @@
 import {ThemeSelector} from "../../components/theme-selector-button";
-import React, {useEffect, useState} from "react";
-import {Fade, Grid as MuiGrid} from "@material-ui/core";
+import React from "react";
+import {Grid as MuiGrid} from "@material-ui/core";
 import PostLink from "../website-links/post-link";
 import LogoLink from "../website-links/logo-link";
 
