@@ -8,7 +8,7 @@ export const COLORS = {
         dark: 'hsl(234deg, 20%, 15%)',
     },
     primary: {
-        light: 'hsl(151deg, 24%, 60%)',
+        light: 'hsl(151deg, 54%, 40%)',
         dark: 'hsl(50deg, 100%, 50%)',
     },
     secondary: {

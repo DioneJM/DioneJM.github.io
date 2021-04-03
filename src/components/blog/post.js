@@ -13,9 +13,16 @@ export default function PageTemplate({ data: { mdx } }) {
         <Layout>
             <SEO title={mdx.frontmatter.title}/>
             <h1>{mdx.frontmatter.title}</h1>
+            <p>{mdx.frontmatter.date}</p>
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                borderTop: '1px solid'
+            }}>
             <MDXProvider components={shortcodes}>
                 <MDXRenderer>{mdx.body}</MDXRenderer>
             </MDXProvider>
+            </div>
         </Layout>
     )
 }
@@ -27,6 +34,8 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
+
       }
     }
   }

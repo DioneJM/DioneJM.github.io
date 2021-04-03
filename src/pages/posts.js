@@ -38,7 +38,7 @@ const PostLink = ({ post, id }) => (
         <StyledLink key={`${id}-link`} to={post.frontmatter.slug}>
             {post.frontmatter.title}
         </StyledLink>
-        <Meta>({post.frontmatter.date})</Meta>
+        <Meta>{post.frontmatter.date}</Meta>
         <Excerpt key={`${id}-p`}>{post.excerpt}</Excerpt>
     </div>
 )

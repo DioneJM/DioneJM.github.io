@@ -22,6 +22,7 @@ const StyledLink = styled(Link)`
 const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 16px;
   position: sticky;
   top: 0;
