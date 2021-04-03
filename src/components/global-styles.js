@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    color: var(--color-secondary);
+    color: var(--color-accent);
   }
 `;
 

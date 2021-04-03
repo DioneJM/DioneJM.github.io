@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from "styled-components";
 import {graphql, Link} from 'gatsby';
 
 import Layout from '../components/layout';
@@ -9,19 +10,36 @@ const Posts = ({data}) => {
         .map((edge,index) => <PostLink id={`${edge.node.id}-${index}`} post={edge.node} />)
 
     return <Layout>
-        <Link to="/">Go back to the homepage</Link>
-        <h1>Welcome to my blog</h1>
-        <h2>My Recent Posts:</h2>
+        <Title>My Recent Posts:</Title>
         <div>{posts}</div>
     </Layout>
 };
 
+const Title = styled.h1`
+    color: var(--color-primary);
+`
+const Meta = styled.h2`
+    color: var(--color-text);
+    font-size: 12px;
+`
+
+const Excerpt = styled.p`
+    color: var(--color-text);
+`
+
+const StyledLink = styled(Link)`
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+`
 const PostLink = ({ post, id }) => (
     <div key={`${id}-div`}>
-        <Link key={`${id}-link`} to={post.frontmatter.slug}>
-            {post.frontmatter.title} ({post.frontmatter.date})
-        </Link>
-        <p key={`${id}-p`}>{post.excerpt}</p>
+        <StyledLink key={`${id}-link`} to={post.frontmatter.slug}>
+            {post.frontmatter.title}
+        </StyledLink>
+        <Meta>({post.frontmatter.date})</Meta>
+        <Excerpt key={`${id}-p`}>{post.excerpt}</Excerpt>
     </div>
 )
 

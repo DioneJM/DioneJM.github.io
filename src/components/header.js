@@ -2,15 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 import {ThemeSelector} from "./theme-selector-button";
+import {Link} from "gatsby";
 
 const Header = ({ siteTitle }) => {
   return (
     <Wrapper>
-      {siteTitle}
+        <StyledLink to="/">{siteTitle}</StyledLink>
       <ThemeSelector />
     </Wrapper>
   );
 };
+
+const StyledLink = styled(Link)`
+    color: var(--color-primary);
+    text-decoration: none;
+`
+
 
 const Wrapper = styled.header`
   display: flex;

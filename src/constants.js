@@ -1,19 +1,23 @@
 export const COLORS = {
     text: {
-        light: 'hsl(0deg, 0%, 10%)', // white
-        dark: 'hsl(0deg, 0%, 100%)', // near-black
+        light: 'hsl(234deg, 20%, 15%)',
+        dark: 'hsl(0deg, 50%, 100%)',
     },
     background: {
-        light: 'hsl(0deg, 0%, 100%)', // white
-        dark: 'hsl(250deg, 70%, 7%)', // navy navy blue
+        light: 'hsl(0deg, 50%, 99%)',
+        dark: 'hsl(234deg, 20%, 15%)',
     },
     primary: {
-        light: 'hsl(340deg, 100%, 40%)', // Pinkish-red
-        dark: 'hsl(50deg, 100%, 50%)', // Yellow
+        light: 'hsl(151deg, 24%, 60%)',
+        dark: 'hsl(50deg, 100%, 50%)',
     },
     secondary: {
         light: 'hsl(250deg, 100%, 50%)', // Purplish-blue
         dark: 'hsl(190deg, 100%, 40%)', // Cyan
+    },
+    accent: {
+        light: 'hsl(13deg, 89%, 69%)',
+        dark: 'hsl(50deg, 100%, 69%)'
     },
     // Grays, scaling from least-noticeable to most-noticeable
     gray300: {
@@ -28,10 +32,6 @@ export const COLORS = {
         light: 'hsl(0deg, 0%, 30%)',
         dark: 'hsl(0deg, 0%, 70%)',
     },
-    random: {
-        light: 'hsl(21deg, 52%, 52%)',
-        dark: 'hsl(60deg, 86%, 86%)'
-    }
 };
 
 export const COLOR_MODE_KEY = 'color-mode';
