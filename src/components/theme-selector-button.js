@@ -2,6 +2,7 @@ import React from "react";
 import {Checkbox, Tooltip} from '@material-ui/core';
 import { ThemeContext } from './theme-context';
 import styled from "styled-components";
+import SVG from "./svg";
 
 const iconSize = 24;
 export const THEME_SELECTED_KEY = 'theme-selected';
@@ -35,9 +36,6 @@ export const ThemeSelector = () => {
     );
 };
 
-const SVG = styled.svg`
-    fill: var(--color-accent);
-`;
 const LightThemeIcon = () => {
     return <SVG xmlns="http://www.w3.org/2000/svg" height={iconSize} width={iconSize} viewBox="0 0 24 24">
         <path d="M0 0h24v24H0z" fill="none"/>

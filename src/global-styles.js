@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     color: var(--color-accent);
+    text-decoration: none;
   }
 
   // mobile first styling
@@ -24,6 +25,10 @@ const GlobalStyles = createGlobalStyle`
     --font-size-small: 14px;
     --font-size-medium: 16px;
     --font-size-large: 24px;
+  }
+  
+  h1 {
+    color: var(--color-text);
   }
   
   // desktop styling override

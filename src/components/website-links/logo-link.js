@@ -1,8 +1,6 @@
-/** @jsx jsx */
-import React, {useEffect, useState} from "react";
-import {jsx} from "theme-ui";
+import React from "react";
 import WebsiteLink from "./website-link";
-import useThemeColors from "../../hooks/useThemeColors";
+import SVG from "../svg";
 
 const LogoLink = () => {
     return <WebsiteLink route={'/'} label={<div style={{
@@ -15,11 +13,7 @@ const LogoLink = () => {
 }
 
 const LocalhostLogo = () => {
-    const {getThemeColor} = useThemeColors();
-    return <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                style={{
-                    fill: getThemeColor('linkColour')
-                }}
+    return <SVG version="1.0" xmlns="http://www.w3.org/2000/svg"
                 width="12vw" height="7vh" viewBox="0 0 620 190"
                 preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,190.000000) scale(0.100000,-0.100000)"
@@ -67,7 +61,7 @@ l7 -31 77 0 78 0 7 68 c9 77 23 111 61 141 39 31 89 28 125 -8 l29 -29 0 -132
 119 -169 l6 -58 73 0 73 0 7 38 c12 75 6 176 -13 219 -43 94 -179 145 -320
 122z"/>
         </g>
-    </svg>
+    </SVG>
 }
 
 export default LogoLink;

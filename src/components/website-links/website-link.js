@@ -1,31 +1,19 @@
-/** @jsx jsx */
-import {jsx, css, Styled} from "theme-ui";
-import {Link} from "gatsby";
 import React from "react";
+import styled from "styled-components";
+import {Link} from "gatsby";
 
-const WebsiteLink = ({ route, label }) => {
+const WebsiteLink = ({route, label}) => {
     return (
-        <Styled.h3
-            as="p"
-            css={css({
-                my: 0,
-            })}
-        >
-            <Styled.a
-                as={Link}
-                css={css({
-                    boxShadow: `none`,
-                    textDecoration: `none`,
-                    color: 'highlight',
-                    fontWeight: 'bold',
-                })}
-                to={route}
-            >
+        <h3>
+            <StyledLink to={route}>
                 {label}
-            </Styled.a>
-        </Styled.h3>
+            </StyledLink>
+        </h3>
     )
-
 }
+
+const StyledLink = styled(Link)`
+    color: var(--color-text);
+`
 
 export default WebsiteLink;
